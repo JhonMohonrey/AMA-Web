@@ -28,8 +28,8 @@ function App(props) {
   const studentInfo = () => {
     const studentInt = (title, info) => {
       return (
-        <p className='bg-[#ebebeb] p-2 rounded-xl font-medium
-        text-gray-700 my-2'>
+        <p className='bg-[#ebebeb] shadow shadow-gray-400 p-2 rounded-xl font-medium
+        text-gray-700 my-2 '>
           <span className='font-bold mr-1 text-black'>
             {title}:
           </span>
@@ -43,7 +43,7 @@ function App(props) {
         data6, data7, isFlex
       ) => {
         return <div className={`border-r-[1px] border-gray-500
-        flex flex-col gap-2 ${isFlex}`}>
+        flex flex-col gap-1 ${isFlex} `}>
           <div className='bg-[#dddcdc]
           p-2 font-bold w-full'>{title}</div>
           <div className='p-1 bg-[#BAD9DF] font-medium'>{data2}</div>
@@ -57,7 +57,7 @@ function App(props) {
       }
 
       return (
-        <div className='bg-white rounded-xl p-2'>
+        <div className='bg-white shadow-md shadow-gray-400 rounded-xl p-2'>
                 <p className='text-center text-2xl font-bold text-gray-600'>Student Schedule</p>
           <div className=' flex rounded-xl border-[1px]
           overflow-hidden my-5 mx-2'>
@@ -136,12 +136,12 @@ function App(props) {
     }
 
     return <div className='
-    flex flex-row items-start justify-start gap-2
-    lg:px-20 p-2
+    flex flex-row items-start justify-start gap-3
+    lg:px-20 p-2 
     '>
 
-      <div className=' px-5 py-3
-      bg-white rounded-xl
+      <div className='shadow-md shadow-gray-400 px-5 py-3
+      bg-white rounded-xl flex flex-col items-center
       '>
         <img
         className='w-20 rounded-full
@@ -149,7 +149,7 @@ function App(props) {
         src={profile} alt="profile-icon" />
 
         <p className='mt-2 text-md w-[200px] font-medium 
-        text-gray-600 select-none'>
+        text-gray-600 select-none text-center'>
           Ramos, Estremadura, Jhon Mohonrey
         </p>
         <p className='text-gray-400 font-medium
@@ -161,18 +161,18 @@ function App(props) {
       </div>
 
       <div className='flex-1 '>
-        <div className='mb-2'>
+        <div className='mb-4 '>
           {schedule()}
         </div>
         
-        <div className='p-2 bg-white rounded-xl mb-2'>
+        <div className='p-2 shadow-md shadow-gray-400 bg-white rounded-xl mb-2'>
           <p className='text-center text-2xl font-bold text-gray-600'>Student Info</p>
 
           <div className='flex gap-2'>
 
           <div className='flex-1'>
             {studentInt("🏫 Campus", "AMACC-Batangas")}
-            {studentInt("🎓 Course/Plan", "Bachelor of Science in Computer Science")}
+            {studentInt("🎓 Course/Plan", "BS. in Computer Science")}
             {studentInt("📅 Sy/Term", "SY 2024-2025 (2427)")}
             {studentInt("🆔 Student ID", "18004438600")}
           </div>
@@ -186,8 +186,6 @@ function App(props) {
 
           </div>
         </div>
-
-    
       </div>
     </div>
   }
